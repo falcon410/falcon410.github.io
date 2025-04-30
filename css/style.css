@@ -1,0 +1,171 @@
+  
+   
+    /* Keep the original color scheme */
+   :root {
+       --bg-primary: #ffffff;
+       --text-primary: #333333;
+       --text-secondary: #666666;
+       --accent: #2c3e50;
+       --border: #e0e0e0;
+       --checkmark: #333333;  /* Added for checkmarks */
+   }
+   
+   [data-theme="dark"] {
+       --bg-primary: #1a1a1a;
+       --text-primary: #ffffff;
+       --text-secondary: #cccccc;
+       --accent: #3498db;
+       --border: #333333;
+       --checkmark: #ffffff;  /* Added for checkmarks */
+   }
+   
+           * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               transition: background-color 0.3s, color 0.3s;
+           }
+   
+           body {
+               background-color: var(--bg-primary);
+               color: var(--text-primary);
+               
+               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji";
+               line-height: 1.6;
+           }
+   
+           #container {
+               max-width: 800px;
+               margin: 0 auto;
+               padding: 2rem;
+           }
+   
+           .theme-switch {
+               position: fixed;
+               top: 20px;
+               right: 20px;
+               background: var(--accent);
+               padding: 10px;
+               border-radius: 50%;
+               cursor: pointer;
+               width: 40px;
+               height: 40px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border: none;
+               color: white;
+           }
+   
+           .header {
+               display: flex;
+               align-items: center;
+               gap: 2rem;
+               margin-bottom: 3rem;
+           }
+   
+           .profile-img {
+               width: 150px;
+               height: 150px;
+               border-radius: 50%;
+               object-fit: cover;
+               border: 3px solid var(--accent);
+           }
+   
+           .name-title {
+               flex-grow: 1;
+           }
+   
+           h1 {
+               font-size: 2.5rem;
+               margin-bottom: 0.5rem;
+               color: var(--text-primary);
+           }
+   
+           h2 {
+               font-size: 1.8rem;
+               margin: 2rem 0 1rem;
+               color: var(--accent);
+           }
+   
+           .section {
+               margin-bottom: 2rem;
+               padding-bottom: 2rem;
+               border-bottom: 1px solid var(--border);
+           }
+   
+           .skills-grid {
+               display: grid;
+               grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+               gap: 1rem;
+           }
+   
+           .skill-item {
+               background-color: var(--accent);
+               color: white;
+               padding: 0.5rem 1rem;
+               border-radius: 4px;
+               text-align: center;
+           }
+   
+           .experience-item {
+               margin-bottom: 1.5rem;
+           }
+   
+           .experience-title {
+               font-weight: bold;
+               color: var(--text-primary);
+               font-size: 1.1rem;
+           }
+   
+           .experience-date {
+               color: var(--text-secondary);
+               font-size: 0.9rem;
+               margin: 0.5rem 0;
+           }
+   
+           .social-links {
+               display: flex;
+               gap: 1rem;
+               margin-top: 1rem;
+           }
+   
+           .social-links a {
+               color: var(--accent);
+               text-decoration: none;
+           }
+   
+           .education-list {
+               list-style-type: none;
+               margin: 1rem 0;
+               color: var(--text-secondary);
+           }
+   
+           .education-list li {
+               margin-bottom: 0.5rem;
+               padding-left: 1.5rem;
+               position: relative;
+           }
+   
+           .line-break {
+               height: 1px;
+               background-color: var(--border);
+               margin: 2rem 0;
+           }
+   
+           @media (max-width: 768px) {
+               .header {
+                   flex-direction: column;
+                   text-align: center;
+               }
+   
+               .profile-img {
+                   width: 120px;
+                   height: 120px;
+               }
+   
+               .skills-grid {
+                   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+               }
+           }
+       
